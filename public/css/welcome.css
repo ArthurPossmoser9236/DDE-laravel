@@ -1,0 +1,65 @@
+:root {
+    --font-inter: "Inter", sans-serif;
+    --color-black: #000;
+    --color-white: #ffffffea;
+    --color-gray: #e6e6e6f3;
+    --color-green-principal: #57b846;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+}
+
+.navbar {
+    position: relative !important;
+    width: 100%;
+    height: 100px;
+
+    background-color: var(--color-black);
+}
+
+.navbar-toggler {
+    background-color: var(--color-white) !important;
+    border: 2px solid var(--color-green-principal) !important;
+}
+
+.navbar-brand img {
+    width: auto;
+    height: 55px;
+}
+
+.about-container {
+    display: grid;
+    grid-template-rows: 60% 40%;
+    width: 100%;
+    height: calc(80% - 100px);
+    background-color: var(--color-black);
+}
+
+.about-title {
+    text-align: justify;
+    padding: 30px 20px 0 20px;
+}
+
+.about-title h1 {
+    font-size: 1.2rem;
+    font-family: var(--font-inter);
+    color: var(--color-white);
+    font-weight: 600;
+    line-height: 30px;
+    margin: 0;
+}
+
+.about-subtitle {
+    text-align: justify;
+    padding: 0 20px;
+}
+
+.about-subtitle p {
+    font-size: 1.1rem;
+    font-family: var(--font-inter);
+    color: var(--color-gray);
+    font-weight: 400;
+    margin: 0;
+}

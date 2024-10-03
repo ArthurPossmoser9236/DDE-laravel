@@ -1,0 +1,214 @@
+:root {
+    --font-principal: "Montserrat", sans-serif;
+}
+.login-page {
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.logo-container {
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.div-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-img {
+    width: 175px;
+    height: auto;
+}
+
+.logo-title {
+    color: #fff;
+    font-family: var(--font-principal);
+    font-size: 2.2rem;
+    line-height: 45px;
+    font-weight: 450;
+}
+
+.login-container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-login {
+    display: flex;
+    flex-direction: column;
+    width: 55%;
+    text-align: center;
+}
+
+.login-title {
+    font-size: 1.5rem;
+    color: #000;
+    font-family: var(--font-principal);
+    font-weight: 600;
+    margin-bottom: 50px;
+}
+
+.email-div,
+.password-div {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+ion-icon {
+    font-size: 1.7rem;
+    color: #57b846;
+    background-color: #e6e6e6;
+    padding: 0.7rem;
+    border-radius: 0 10px 10px 0;
+}
+
+input {
+    padding: 15px;
+    width: 100%;background-color: #e6e6e6;
+    border: none;
+    border-radius: 10px 0 0 10px;
+    font-family: var(--font-principal);
+    color: #666;
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+input:focus {
+    outline: none;
+    color: #000;
+}
+
+.btn-submit {
+    padding: 15px;
+    margin-top: 30px;
+    border: none;
+    border-radius: 50px;
+    background-color: #57b846;
+    color: #fff;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+.btn-submit:hover {
+    background-color: #000;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.link-senha {
+    font-size: 0.9rem;
+    color: #666;
+    text-decoration: underline;
+    font-family: var(--font-principal);
+}
+
+.option-cadastrar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;   
+}
+
+.cadastrar-text {
+    font-family: var(--font-principal);
+    font-size: 0.9rem;
+    color: #000;
+    margin-right: 5px;
+}
+
+.link-cadastrar {
+    font-size: 0.9rem;
+    color: #666;
+    text-decoration: underline;
+    font-family: var(--font-principal);
+}
+
+
+@media screen and (max-width: 1251px) {
+    .form-login {
+        width: 60%;
+    }
+
+    
+}
+
+@media screen and (max-width: 1151px) {
+    .form-login {
+        width: 65%;
+    }
+}
+
+@media screen and (max-width: 1001px) {
+    .form-login {
+        width: 70%;
+    }
+    
+    .logo-title {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 861px) {
+    .form-login {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 701px) {
+    .logo-container {
+        display: none;
+    }
+
+    .login-page {
+        display: flex;
+        background-color: #000;
+    }
+
+    .login-container {
+        width: 70%;
+        margin: 0 auto;
+    }
+
+    .login-title {
+        color: #fff;
+    }
+
+    .link-cadastrar,
+    .link-senha {
+        color: #bbbbbb;
+    }
+
+    .cadastrar-text {
+        color: #fff;
+    }
+}
+
+@media screen and (max-width: 621px) {
+    .login-container {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 541px) {
+    .login-container {
+        width: 85%;
+    }
+}
+
+@media screen and (max-width: 441px) {
+    .login-container {
+        width: 100%;
+    }
+}
