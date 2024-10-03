@@ -19,7 +19,7 @@
 </head>
 
 <body>
-    <!-- header 
+    <!-- header -->
     <header class="header-container">
         <div class="header-logo">
             <img src="/imgs/Diário do Estudante.svg" alt="logo">
@@ -40,8 +40,7 @@
             </ul>
         </div>
     </header>
-    -->
-    <!-- menu mobile -->
+    <!-- navbar mobile -->
     <nav class="navbar fixed-top">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">
@@ -77,10 +76,6 @@
                                 <li><a class="dropdown-item" href="#">Something else here</a></li>
                             </ul>
                         </li>
-                        <li class="nav-item">
-                            <a href="/login" class="btn-login">Login</a>
-                            <a href="/cadastro" class="btn-cadastro">Cadastre-se</a>
-                        </li>
                     </ul>
                 </div>
             </div>
@@ -89,10 +84,18 @@
     <!-- about -->
     <section class="about-container">
         <div class="about-title">
-            <h1>O Diário do Estudante é uma plataforma de estudos gratuita que oferece ferramentas para organizar a sua vida acadêmica, melhore suas notas e maximize a eficiência. Registre-se e transforme seu potencial de aprendizado.</h1>
+            <h1>O Diário do Estudante é uma plataforma de estudos gratuita que oferece ferramentas para organizar a sua vida acadêmica, melhore suas notas e maximize a eficiência.</h1>
+        </div>
+        <div class="about-links">
+            <div class="about-div-link">
+                <a href="/login">Login</a>
+            </div>
+            <div class="about-div-link">
+                <a href="/cadastro">Cadastre-se!</a>
+            </div>
         </div>
         <div class="about-subtitle">
-            <p>Explore essa página para descobrir todas as funcionalidades, facilitando a vida acadêmica de forma fácil e intuitiva!</p>
+            <p>Cadastre-se e transforme seu potencial de aprendizado!</p>
         </div>
     </section>
 </body>

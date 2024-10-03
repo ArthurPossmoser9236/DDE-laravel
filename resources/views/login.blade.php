@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,6 +15,7 @@
     <title>Login</title>
     <link rel="shortcut icon" href="/imgs/login.svg" type="image/x-icon">
 </head>
+
 <body>
     <div class="login-page">
         <div class="logo-container">
@@ -23,18 +25,19 @@
             </div>
         </div>
         <div class="login-container">
-            <form class="form-login">
-                <h2 class="login-title">Login</h1>
+            <form class="form-login" action="{{ route('login') }}" method="POST">
+                @csrf
+                <h2 class="login-title">Login</h2>
                 <div class="email-div">
-                    <input type="email" placeholder="Email" autofocus="true"/>
+                    <input type="email" name="email" placeholder="Email" required autofocus />
                     <ion-icon name="mail-outline"></ion-icon>
                 </div>
                 <div class="password-div">
-                    <input type="password" placeholder="Password"/>
+                    <input type="password" name="password" placeholder="Password" required />
                     <ion-icon name="lock-closed-outline"></ion-icon>
                 </div>
                 <a class="link-senha" href="#">Esqueci minha senha</a>
-                <input class="btn-submit" type="submit" value="Fazer login" class="btn"/>
+                <input class="btn-submit" type="submit" value="Fazer login" />
                 <div class="option-cadastrar">
                     <p class="cadastrar-text">Não tem uma conta?</p>
                     <a class="link-cadastrar" href="/cadastro">Cadastrar-se!</a>
@@ -42,8 +45,10 @@
             </form>
         </div>
     </div>
+
     <!-- ion icons -->
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
+
 </html>

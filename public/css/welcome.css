@@ -2,64 +2,119 @@
     --font-inter: "Inter", sans-serif;
     --color-black: #000;
     --color-white: #ffffffea;
-    --color-gray: #e6e6e6f3;
+    --color-gray: #bebebef3;
     --color-green-principal: #57b846;
 }
 
 body {
+    overflow-x: hidden;
     width: 100vw;
     height: 100vh;
+    margin: 0;
+    padding: 0;
 }
 
-.navbar {
-    position: relative !important;
-    width: 100%;
-    height: 100px;
+/* =-=-=-=-=-=-=- header =-=-=-=-=-=-=- */
+.header-container {
+    display: none;
+}
 
+/* =-=-=-=-=-=-=- navbar mobile =-=-=-=-=-=-=- */
+.navbar {
     background-color: var(--color-black);
+    height: 80px;
+}
+
+.navbar-brand p {
+    display: none;
 }
 
 .navbar-toggler {
-    background-color: var(--color-white) !important;
-    border: 2px solid var(--color-green-principal) !important;
+    background-color: var(--color-gray) !important;
 }
 
-.navbar-brand img {
-    width: auto;
-    height: 55px;
-}
 
+/* =-=-=-=-=-=-=- about =-=-=-=-=-=-=- */
 .about-container {
-    display: grid;
-    grid-template-rows: 60% 40%;
     width: 100%;
-    height: calc(80% - 100px);
+    margin-top: 80px;
+    height: calc(100% - 80px);
     background-color: var(--color-black);
-}
-
-.about-title {
-    text-align: justify;
-    padding: 30px 20px 0 20px;
+    padding: 50px 15px 20px 15px;
+    display: flex;
+    flex-direction: column;
+    
 }
 
 .about-title h1 {
-    font-size: 1.2rem;
     font-family: var(--font-inter);
-    color: var(--color-white);
-    font-weight: 600;
-    line-height: 30px;
-    margin: 0;
-}
-
-.about-subtitle {
-    text-align: justify;
-    padding: 0 20px;
+    font-size: 1.5rem;
+    color: var(--color-gray);
+    line-height: 35px;
+    margin: 0 0 30px 0;
+    text-align: center;
 }
 
 .about-subtitle p {
-    font-size: 1.1rem;
     font-family: var(--font-inter);
-    color: var(--color-gray);
-    font-weight: 400;
-    margin: 0;
+    font-size: 1.3rem;
+    color: var(--color-white);
+    margin: 30px 0 0 0;
+    text-align: center;
+}
+
+/* about links */
+.about-div-link {
+    position: relative;
+    display: inline-block;
+    margin: 20px;
+}
+
+.about-div-link a {
+    color: var(--color-green-principal);
+    font-weight: bold;
+    font-size: 1.4rem;
+    text-align: center;
+    text-decoration: none;
+    background-color: var(--color-white);
+    display: block;
+    position: relative;
+    padding: 5px 10px;
+    font-family: var(--font-inter);
+
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    text-shadow: 0px 1px 0px var(--color-gray);
+    filter: dropshadow(color=var(--color-gray), offx=0px, offy=1px);
+
+    -webkit-box-shadow: inset 0 1px 0 var(--color-white), 0 10px 0 var(--color-green-principal);
+    -moz-box-shadow: inset 0 1px 0 var(--color-white), 0 10px 0 var(--color-green-principal);
+    box-shadow: inset 0 1px 0 var(--color-white), 0 10px 0 var(--color-green-principal);
+
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+.about-div-link a:active {
+    top: 10px;
+    background-color: var(--color-white);
+
+    -webkit-box-shadow: inset 0 1px 0 var(--color-white), inset 0 -3px 0 var(--color-green-principal);
+    -moz-box-shadow: inset 0 1px 0 var(--color-white), inset 0 -3px 0 var(--color-green-principal);
+    box-shadow: inset 0 1px 0 var(--color-white), inset 0 -3px 0 var(--color-green-principal);
+}
+
+.about-div-link:after {
+    content: "";
+    height: 100%;
+    width: 100%;
+    padding: 4px;
+    position: absolute;
+    bottom: -15px;
+    left: -4px;
+    z-index: -1;
+    background-color: var(--color-white);
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
 }
