@@ -135,6 +135,24 @@ input:focus {
     font-family: var(--font-principal);
 }
 
+/* error message */
+.alert {
+    padding: 5px 10px;
+    background-color: #fff;
+    border-radius: 5px;
+    border: 2px solid red;
+    display: flex;
+    align-items: center;
+    font-size: 1.1rem;
+    font-weight: 400;
+    font-family: var(--font-principal);
+    margin-bottom: 30px;
+}
+
+.alert-danger {
+    color: #000;
+}
+
 @media screen and (max-width: 1251px) {
     .form-login {
         width: 60%;

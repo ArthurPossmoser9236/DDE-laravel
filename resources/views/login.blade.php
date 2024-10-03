@@ -28,6 +28,14 @@
             <form class="form-login" action="{{ route('login') }}" method="POST">
                 @csrf
                 <h2 class="login-title">Login</h2>
+
+                @if ($errors->has('loginError'))
+                <div class="alert alert-danger">
+                    {{ $errors->first('loginError') }}
+                </div>
+                @endif
+
+
                 <div class="email-div">
                     <input type="email" name="email" placeholder="Email" required autofocus />
                     <ion-icon name="mail-outline"></ion-icon>
