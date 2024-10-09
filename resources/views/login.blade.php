@@ -11,8 +11,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <!-- FontAwesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
     <title>Login</title>
     <link rel="shortcut icon" href="/imgs/login.svg" type="image/x-icon">
@@ -43,7 +41,7 @@
                     <input type="password" name="password" placeholder="Password" required />
                     <ion-icon name="lock-closed-outline"></ion-icon>
                 </div>
-                <a class="link-senha" href="#">Esqueci minha senha</a>
+                <a class="link-senha" href="{{ route('password.request') }}">Esqueci minha senha</a>
                 <input class="btn-submit" type="submit" value="Fazer login" />
                 <div class="option-cadastrar">
                     <p class="cadastrar-text">Não tem uma conta?</p>
