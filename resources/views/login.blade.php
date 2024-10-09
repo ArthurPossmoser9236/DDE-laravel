@@ -11,6 +11,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
     <title>Login</title>
     <link rel="shortcut icon" href="/imgs/login.svg" type="image/x-icon">
@@ -26,16 +28,13 @@
         </div>
         <div class="login-container">
             <form class="form-login" action="{{ route('login') }}" method="POST">
-                @csrf
-                <h2 class="login-title">Login</h2>
-
                 @if ($errors->has('loginError'))
                 <div class="alert alert-danger">
                     {{ $errors->first('loginError') }}
                 </div>
                 @endif
-
-
+                @csrf
+                <h2 class="login-title">Login</h2>
                 <div class="email-div">
                     <input type="email" name="email" placeholder="Email" required autofocus />
                     <ion-icon name="mail-outline"></ion-icon>
@@ -48,7 +47,7 @@
                 <input class="btn-submit" type="submit" value="Fazer login" />
                 <div class="option-cadastrar">
                     <p class="cadastrar-text">Não tem uma conta?</p>
-                    <a class="link-cadastrar" href="/cadastro">Cadastrar-se!</a>
+                    <a class="link-cadastrar" href="/cadastro">Cadastre-se!</a>
                 </div>
             </form>
         </div>
@@ -57,6 +56,8 @@
     <!-- ion icons -->
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <!-- js -->
+    <script src="/public/js/script.js"></script>
 </body>
 
 </html>

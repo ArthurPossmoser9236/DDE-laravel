@@ -17,12 +17,14 @@
 <body>
     <div class="cadastro-page">
         <div class="cadastro-container">
-            <form class="form-cadastro">
-                <h2 class="cadastro-title">Cadastro</h1>
-                <input type="text" placeholder="username">
-                <input type="email" placeholder="Email" autofocus="true"/>
-                <input type="password" placeholder="Password"/>
-                <input type="submit" value="Fazer cadastro" class="btn"/>
+            <form class="form-cadastro" action="{{ route('register') }}" method="POST">
+                @csrf
+                <h2 class="cadastro-title">Cadastro</h2>
+                <input class="input-username" type="text" name="username" placeholder="Username" required>
+                <input class="input-email" type="email" name="email" placeholder="Email" required autofocus="true"/>
+                <input type="password" class="input-password" name="password" placeholder="Senha" required/>
+                <input type="password" class="input-passwordConfirmation" name="password_confirmation" placeholder="Confirme sua senha" required/>
+                <input type="submit" class="input-submit" value="Fazer cadastro" class="btn"/>
                 <div class="option-login">
                     <p class="login-text">Já tem uma conta?</p>
                     <a class="link-login" href="/login">Fazer Login!</a>
